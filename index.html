@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Malka Williams — Community Planning Portfolio</title>
+<meta name="description" content="Urban planner and project manager based in Los Angeles, focused on community planning, public space, and equitable development." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #1a1f2c;
+    --ink-soft: #2d3344;
+    --paper: #f5f1e8;
+    --paper-warm: #ede6d3;
+    --terracotta: #b8552d;
+    --terracotta-deep: #8a3d1f;
+    --moss: #4a5d3a;
+    --rule: #c8bfa8;
+    --muted: #6b6859;
+    --display: 'Fraunces', Georgia, serif;
+    --body: 'Inter', -apple-system, sans-serif;
+  }
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+font-family: var(–body);
+color: var(–ink);
+background: var(–paper);
+line-height: 1.6;
+font-size: 16px;
+-webkit-font-smoothing: antialiased;
+overflow-x: hidden;
+}
+
+body::before {
+content: ‘’;
+position: fixed;
+inset: 0;
+background-image:
+radial-gradient(circle at 20% 80%, rgba(184, 85, 45, 0.04) 0%, transparent 50%),
+radial-gradient(circle at 80% 20%, rgba(74, 93, 58, 0.04) 0%, transparent 50%);
+pointer-events: none;
+z-index: 0;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 2rem;
+position: relative;
+z-index: 1;
+}
+
+/* ============ NAV ============ */
+nav {
+position: fixed;
+top: 0; left: 0; right: 0;
+z-index: 100;
+background: rgba(245, 241, 232, 0.92);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid var(–rule);
+padding: 1rem 0;
+}
+
+nav .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.nav-brand {
+font-family: var(–display);
+font-weight: 600;
+font-size: 1.15rem;
+letter-spacing: -0.01em;
+color: var(–ink);
+text-decoration: none;
+}
+
+.nav-brand em {
+font-style: italic;
+color: var(–terracotta);
+}
+
+.nav-links {
+display: flex;
+gap: 2.5rem;
+list-style: none;
+}
+
+.nav-links a {
+color: var(–ink-soft);
+text-decoration: none;
+font-size: 0.875rem;
+font-weight: 500;
+letter-spacing: 0.02em;
+transition: color 0.2s ease;
+position: relative;
+}
+
+.nav-links a:hover { color: var(–terracotta); }
+
+.nav-links a::after {
+content: ‘’;
+position: absolute;
+left: 0;
+bottom: -4px;
+width: 0;
+height: 1px;
+background: var(–terracotta);
+transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after { width: 100%; }
+
+@media (max-width: 720px) {
+.nav-links { gap: 1.25rem; }
+.nav-links a { font-size: 0.8rem; }
+}
+
+/* ============ HERO ============ */
+header.hero {
+padding: 10rem 0 6rem;
+border-bottom: 1px solid var(–rule);
+position: relative;
+}
+
+.hero-eyebrow {
+font-size: 0.75rem;
+font-weight: 600;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: var(–terracotta);
+margin-bottom: 1.5rem;
+}
+
+h1.hero-name {
+font-family: var(–display);
+font-weight: 400;
+font-size: clamp(3.5rem, 9vw, 7rem);
+line-height: 0.95;
+letter-spacing: -0.03em;
+margin-bottom: 2rem;
+color: var(–ink);
+}
+
+h1.hero-name em {
+font-style: italic;
+font-weight: 300;
+color: var(–terracotta);
+}
+
+.hero-tagline {
+font-family: var(–display);
+font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+font-weight: 400;
+line-height: 1.4;
+color: var(–ink-soft);
+max-width: 680px;
+margin-bottom: 2.5rem;
+}
+
+.hero-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 2rem;
+align-items: center;
+padding-top: 2rem;
+border-top: 1px solid var(–rule);
+}
+
+.hero-meta-item {
+font-size: 0.875rem;
+color: var(–ink-soft);
+}
+
+.hero-meta-item strong {
+display: block;
+font-size: 0.7rem;
+font-weight: 600;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+color: var(–muted);
+margin-bottom: 0.35rem;
+}
+
+.hero-meta-item a {
+color: var(–ink-soft);
+text-decoration: none;
+border-bottom: 1px solid transparent;
+transition: border-color 0.2s ease;
+}
+
+.hero-meta-item a:hover { border-bottom-color: var(–terracotta); color: var(–terracotta); }
+
+.credential-badge {
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+padding: 0.4rem 0.85rem;
+background: var(–ink);
+color: var(–paper);
+font-size: 0.72rem;
+font-weight: 600;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+border-radius: 2px;
+}
+
+.credential-badge::before {
+content: ‘’;
+width: 6px;
+height: 6px;
+background: var(–terracotta);
+border-radius: 50%;
+}
+
+/* ============ STATS BAND ============ */
+.stats-band {
+background: var(–ink);
+color: var(–paper);
+padding: 4rem 0;
+}
+
+.stats-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 3rem;
+}
+
+.stat {
+border-left: 2px solid var(–terracotta);
+padding-left: 1.5rem;
+}
+
+.stat-number {
+font-family: var(–display);
+font-size: 3rem;
+font-weight: 500;
+line-height: 1;
+margin-bottom: 0.5rem;
+color: var(–paper);
+}
+
+.stat-label {
+font-size: 0.85rem;
+line-height: 1.5;
+color: var(–paper-warm);
+opacity: 0.85;
+}
+
+/* ============ SECTIONS ============ */
+section {
+padding: 6rem 0;
+position: relative;
+}
+
+section + section { border-top: 1px solid var(–rule); }
+
+.section-header {
+margin-bottom: 4rem;
+max-width: 780px;
+}
+
+.section-eyebrow {
+font-size: 0.7rem;
+font-weight: 600;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(–terracotta);
+margin-bottom: 1.25rem;
+display: flex;
+align-items: center;
+gap: 1rem;
+}
+
+.section-eyebrow::before {
+content: ‘’;
+width: 32px;
+height: 1px;
+background: var(–terracotta);
+}
+
+h2.section-title {
+font-family: var(–display);
+font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+font-weight: 400;
+line-height: 1.05;
+letter-spacing: -0.025em;
+color: var(–ink);
+}
+
+h2.section-title em {
+font-style: italic;
+color: var(–terracotta);
+font-weight: 300;
+}
+
+/* ============ ABOUT ============ */
+.about-grid {
+display: grid;
+grid-template-columns: 1fr 1.4fr;
+gap: 4rem;
+}
+
+@media (max-width: 880px) {
+.about-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.about-aside {
+font-family: var(–display);
+font-size: 1.4rem;
+font-style: italic;
+font-weight: 300;
+line-height: 1.4;
+color: var(–terracotta-deep);
+padding-right: 2rem;
+border-right: 1px solid var(–rule);
+}
+
+@media (max-width: 880px) {
+.about-aside { border-right: none; border-left: 2px solid var(–terracotta); padding-left: 1.5rem; padding-right: 0; }
+}
+
+.about-body p {
+font-size: 1.05rem;
+margin-bottom: 1.4rem;
+color: var(–ink-soft);
+}
+
+.about-body p strong { color: var(–ink); font-weight: 600; }
+
+/* ============ PRACTICE AREAS ============ */
+.practice-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 1.5rem;
+margin-top: 3rem;
+}
+
+.practice-card {
+background: var(–paper-warm);
+padding: 1.75rem;
+border-radius: 4px;
+border-top: 3px solid var(–terracotta);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.practice-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 12px 30px -12px rgba(26, 31, 44, 0.18);
+}
+
+.practice-card h3 {
+font-family: var(–display);
+font-size: 1.2rem;
+font-weight: 600;
+margin-bottom: 0.5rem;
+color: var(–ink);
+}
+
+.practice-card p {
+font-size: 0.9rem;
+color: var(–muted);
+line-height: 1.55;
+}
+
+/* ============ PROJECT ============ */
+.project {
+margin-bottom: 7rem;
+padding-bottom: 5rem;
+border-bottom: 1px solid var(–rule);
+}
+
+.project:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+
+.project-hero {
+width: 100%;
+margin-bottom: 3rem;
+border-radius: 4px;
+overflow: hidden;
+box-shadow: 0 20px 50px -20px rgba(26, 31, 44, 0.3);
+aspect-ratio: 16 / 10;
+background: var(–paper-warm);
+}
+
+.project-hero img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+.project-body {
+display: grid;
+grid-template-columns: 280px 1fr;
+gap: 4rem;
+}
+
+@media (max-width: 880px) {
+.project-body { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.project-meta {
+position: sticky;
+top: 6rem;
+align-self: start;
+}
+
+@media (max-width: 880px) { .project-meta { position: static; } }
+
+.project-period {
+font-size: 0.75rem;
+font-weight: 600;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+color: var(–terracotta);
+margin-bottom: 0.75rem;
+}
+
+.project-org {
+font-family: var(–display);
+font-size: 1.1rem;
+font-weight: 600;
+color: var(–ink);
+margin-bottom: 0.5rem;
+line-height: 1.3;
+}
+
+.project-location {
+font-size: 0.875rem;
+color: var(–muted);
+margin-bottom: 1.5rem;
+}
+
+.project-tags {
+display: flex;
+flex-wrap: wrap;
+gap: 0.4rem;
+margin-top: 1rem;
+}
+
+.project-tag {
+font-size: 0.7rem;
+font-weight: 500;
+letter-spacing: 0.05em;
+padding: 0.3rem 0.65rem;
+background: var(–paper-warm);
+color: var(–ink-soft);
+border: 1px solid var(–rule);
+border-radius: 2px;
+}
+
+.project-content h3.project-title {
+font-family: var(–display);
+font-size: 1.85rem;
+font-weight: 500;
+line-height: 1.2;
+color: var(–ink);
+margin-bottom: 1.5rem;
+letter-spacing: -0.01em;
+}
+
+.project-content > p.project-summary {
+font-size: 1.02rem;
+line-height: 1.65;
+color: var(–ink-soft);
+margin-bottom: 2rem;
+}
+
+.project-detail { margin-bottom: 1.75rem; }
+
+.project-detail-label {
+font-size: 0.7rem;
+font-weight: 700;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: var(–terracotta);
+margin-bottom: 0.6rem;
+display: block;
+}
+
+.project-detail-content {
+font-size: 0.95rem;
+color: var(–ink-soft);
+line-height: 1.65;
+}
+
+.project-detail-content ul {
+list-style: none;
+}
+
+.project-detail-content li {
+padding-left: 1.2rem;
+position: relative;
+margin-bottom: 0.4rem;
+}
+
+.project-detail-content li::before {
+content: ‘—’;
+position: absolute;
+left: 0;
+color: var(–terracotta);
+}
+
+/* ============ DATA CALLOUT ============ */
+.data-callout {
+background: var(–paper-warm);
+border-left: 3px solid var(–terracotta);
+padding: 1.5rem 1.75rem;
+margin: 2rem 0;
+border-radius: 0 4px 4px 0;
+}
+
+.data-callout-label {
+font-size: 0.7rem;
+font-weight: 700;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: var(–terracotta-deep);
+margin-bottom: 0.85rem;
+}
+
+.data-stats {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+gap: 1.5rem;
+}
+
+.data-stat-num {
+font-family: var(–display);
+font-size: 2rem;
+font-weight: 600;
+color: var(–terracotta-deep);
+line-height: 1;
+margin-bottom: 0.3rem;
+}
+
+.data-stat-label {
+font-size: 0.78rem;
+color: var(–muted);
+line-height: 1.4;
+}
+
+/* ============ IMAGE GRID ============ */
+.project-images {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 1rem;
+margin: 2.5rem 0;
+}
+
+@media (max-width: 600px) {
+.project-images { grid-template-columns: 1fr; }
+}
+
+.project-images figure {
+margin: 0;
+}
+
+.project-images img {
+width: 100%;
+height: auto;
+border-radius: 4px;
+display: block;
+box-shadow: 0 8px 20px -8px rgba(26, 31, 44, 0.2);
+}
+
+.project-images figcaption {
+font-size: 0.78rem;
+color: var(–muted);
+margin-top: 0.6rem;
+line-height: 1.4;
+font-style: italic;
+}
+
+.project-link {
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+margin-top: 1.5rem;
+color: var(–terracotta-deep);
+text-decoration: none;
+font-size: 0.9rem;
+font-weight: 600;
+border-bottom: 1px solid var(–terracotta-deep);
+padding-bottom: 2px;
+transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.project-link:hover { gap: 0.8rem; color: var(–terracotta); }
+
+/* ============ SKILLS ============ */
+.skills-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 2.5rem;
+margin-top: 3rem;
+}
+
+.skill-cluster h3 {
+font-family: var(–display);
+font-size: 1.05rem;
+font-weight: 600;
+color: var(–terracotta-deep);
+margin-bottom: 1rem;
+padding-bottom: 0.5rem;
+border-bottom: 1px solid var(–rule);
+letter-spacing: 0.01em;
+}
+
+.skill-cluster ul {
+list-style: none;
+}
+
+.skill-cluster li {
+font-size: 0.92rem;
+color: var(–ink-soft);
+padding: 0.4rem 0;
+display: flex;
+align-items: baseline;
+gap: 0.5rem;
+}
+
+.skill-cluster li::before {
+content: ‘·’;
+color: var(–terracotta);
+font-weight: 700;
+font-size: 1.2rem;
+}
+
+/* ============ CTA ============ */
+.cta-section {
+background: var(–ink);
+color: var(–paper);
+padding: 6rem 0;
+text-align: center;
+}
+
+.cta-section h2 {
+font-family: var(–display);
+font-size: clamp(2rem, 4vw, 3rem);
+font-weight: 400;
+line-height: 1.15;
+margin-bottom: 1.5rem;
+color: var(–paper);
+}
+
+.cta-section h2 em { font-style: italic; color: var(–terracotta); font-weight: 300; }
+
+.cta-section p {
+font-size: 1.1rem;
+color: var(–paper-warm);
+margin-bottom: 2.5rem;
+max-width: 560px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.cta-buttons {
+display: flex;
+gap: 1rem;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.btn {
+display: inline-block;
+padding: 1rem 2rem;
+font-size: 0.9rem;
+font-weight: 600;
+letter-spacing: 0.05em;
+text-decoration: none;
+border-radius: 2px;
+transition: all 0.25s ease;
+}
+
+.btn-primary {
+background: var(–terracotta);
+color: var(–paper);
+}
+
+.btn-primary:hover { background: var(–terracotta-deep); transform: translateY(-2px); }
+
+.btn-outline {
+background: transparent;
+color: var(–paper);
+border: 1px solid var(–paper-warm);
+}
+
+.btn-outline:hover { background: var(–paper); color: var(–ink); }
+
+footer.site-footer {
+background: var(–ink-soft);
+color: var(–paper-warm);
+padding: 2rem 0;
+text-align: center;
+font-size: 0.825rem;
+}
+
+footer.site-footer a {
+color: var(–paper);
+text-decoration: none;
+border-bottom: 1px solid transparent;
+}
+
+footer.site-footer a:hover { border-bottom-color: var(–terracotta); }
+
+/* ============ ANIMATIONS ============ */
+@keyframes fadeUp {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-eyebrow, h1.hero-name, .hero-tagline, .hero-meta {
+animation: fadeUp 0.8s ease-out backwards;
+}
+
+h1.hero-name { animation-delay: 0.1s; }
+.hero-tagline { animation-delay: 0.25s; }
+.hero-meta { animation-delay: 0.4s; }
+</style>
+
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+
+<nav>
+  <div class="container">
+    <a href="#top" class="nav-brand">Malka <em>Williams</em></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#practice">Practice</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+
+<header class="hero" id="top">
+  <div class="container">
+    <div class="hero-eyebrow">Community Planning Portfolio</div>
+    <h1 class="hero-name">Malka <em>Williams</em></h1>
+    <p class="hero-tagline">
+      Urban planner and project manager building equitable, community-rooted places where people belong.
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <strong>Based in</strong>
+        Los Angeles, CA · Open to Hybrid
+      </div>
+      <div class="hero-meta-item">
+        <strong>Credentials</strong>
+        <span class="credential-badge">APA Member</span>
+      </div>
+      <div class="hero-meta-item">
+        <strong>Currently Pursuing</strong>
+        M.U.P. &amp; AICP Certification
+      </div>
+      <div class="hero-meta-item">
+        <strong>Education</strong>
+        B.A. Urban Studies &amp; Planning, UC San Diego
+      </div>
+      <div class="hero-meta-item">
+        <strong>Contact</strong>
+        <a href="mailto:[email protected]">[email protected]</a>
+      </div>
+      <div class="hero-meta-item">
+        <strong>Phone</strong>
+        <a href="tel:2132486708">(213) 248-6708</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ STATS ============ -->
+
+<div class="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-number">5+</div>
+        <div class="stat-label">Years across community planning, public space research, and project management</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">500+</div>
+        <div class="stat-label">Community members engaged through participatory design and intercept surveys</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Cities of practice — Detroit, Tijuana, and Los Angeles</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+
+<section id="about">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">About</div>
+      <h2 class="section-title">Planning for people, <em>rooted in community.</em></h2>
+    </div>
+
+```
+<div class="about-grid">
+  <aside class="about-aside">
+    Cities thrive when the people who live in them have a real voice in shaping them.
+  </aside>
+  <div class="about-body">
+    <p>
+      I'm an urban planner and project manager whose work spans <strong>community planning, public space research, and equitable development</strong>. From conducting spatial-use research with the City of Detroit's Planning &amp; Development Department to leading participatory design fieldwork at UC San Diego's Cross-Border Community Station, I've built a practice grounded in <strong>listening first, then planning</strong>.
+    </p>
+    <p>
+      I bring the analytical rigor of a planner and the people-centered instincts of a community organizer. My academic work on equitable smart growth and gentrification deepened my understanding of how planning decisions, well-intentioned or not, can uplift or displace communities. That awareness drives everything I do.
+    </p>
+    <p>
+      Outside of planning, I've also led production and procurement operations at a Los Angeles consumer goods company, where I managed cross-functional teams, vendor relationships, and complex supply systems. That operational experience sharpened how I think about implementation, systems coordination, and getting plans actually built.
+    </p>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ============ PRACTICE AREAS ============ -->
+
+<section id="practice">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Practice Areas</div>
+      <h2 class="section-title">Where I focus my <em>work and research.</em></h2>
+    </div>
+    <div class="practice-grid">
+      <div class="practice-card">
+        <h3>Community Planning</h3>
+        <p>Participatory engagement, stakeholder coordination, and neighborhood-scale planning that centers resident voice.</p>
+      </div>
+      <div class="practice-card">
+        <h3>Public Space &amp; Placemaking</h3>
+        <p>Activation, programming, and spatial-use research for plazas, streets, and civic spaces.</p>
+      </div>
+      <div class="practice-card">
+        <h3>Equitable Development</h3>
+        <p>Anti-displacement strategy, equitable smart growth, and planning frameworks that uplift underserved communities.</p>
+      </div>
+      <div class="practice-card">
+        <h3>Smart Cities &amp; Infrastructure</h3>
+        <p>Research interest in AI-integrated infrastructure and equitable smart-city development for global communities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+
+<section id="projects">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Selected Work</div>
+      <h2 class="section-title">Experience that <em>builds community.</em></h2>
+    </div>
+
+```
+<!-- ============================================== -->
+<!-- PROJECT 1: SPIRIT PLAZA                         -->
+<!-- ============================================== -->
+<article class="project">
+  <div class="project-hero">
+    <img src="images/spirit-plaza-aerial.png" alt="Aerial view of Spirit Plaza after activation, with bright blue and orange painted street murals on Woodward Avenue, Detroit, summer 2017." />
+  </div>
+
+  <div class="project-body">
+    <div class="project-meta">
+      <div class="project-period">2018</div>
+      <div class="project-org">City of Detroit — Planning &amp; Development Department</div>
+      <div class="project-location">Detroit, MI</div>
+      <div class="project-tags">
+        <span class="project-tag">Public Space</span>
+        <span class="project-tag">Field Research</span>
+        <span class="project-tag">Spatial Mapping</span>
+        <span class="project-tag">Intercept Surveys</span>
+      </div>
+    </div>
+
+    <div class="project-content">
+      <h3 class="project-title">Spirit Plaza — A Public Space Pilot</h3>
+      <p class="project-summary">
+        Spirit Plaza was a pilot activation that closed a block of Woodward Avenue at the Spirit of Detroit statue, converting a downtown traffic corridor into a civic plaza. I joined the Planning &amp; Development Department's data collection effort to evaluate how the space was used before and after activation, and to inform the city's decision on whether to make the plaza permanent.
+      </p>
+
+      <div class="project-detail">
+        <span class="project-detail-label">My Role</span>
+        <div class="project-detail-content">
+          I conducted intercept surveys with plaza users, completed weekday and weekend spatial-use mapping across morning, lunch, and afternoon time blocks, and contributed to the final data report submitted to PDD leadership.
+        </div>
+      </div>
+
+      <div class="project-detail">
+        <span class="project-detail-label">Methods &amp; Tools</span>
+        <div class="project-detail-content">
+          Intercept surveys (pre- and post-activation) · Pedestrian counts · Behavioral mapping with posture coding (sitting, conversing, eating, photographing, food-truck queueing, etc.) · Quadrant-based site mapping · Demographic analysis · Comparative reporting
+        </div>
+      </div>
+
+      <div class="data-callout">
+        <div class="data-callout-label">Findings from the Field</div>
+        <div class="data-stats">
+          <div>
+            <div class="data-stat-num">248</div>
+            <div class="data-stat-label">Survey respondents across pre- and post-activation phases</div>
+          </div>
+          <div>
+            <div class="data-stat-num">81%</div>
+            <div class="data-stat-label">Of respondents supported making Spirit Plaza permanent</div>
+          </div>
+          <div>
+            <div class="data-stat-num">~2x</div>
+            <div class="data-stat-label">Increase in Saturday pedestrian counts after activation</div>
+          </div>
+          <div>
+            <div class="data-stat-num">101</div>
+            <div class="data-stat-label">Peak weekday lunch-hour users observed in the plaza</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-images">
+        <figure>
+          <img src="images/spirit-plaza-intercept-survey.png" alt="Intercept survey conducted with a plaza user seated at one of the plaza's red café tables." />
+          <figcaption>Intercept surveys captured how residents and non-residents used the space — the post-activation cohort included noticeably more residents and a more even gender distribution.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/spirit-plaza-active-use.png" alt="Plaza users at picnic tables during weekday lunch with food trucks visible in the background." />
+          <figcaption>Weekday lunch was the peak-use period, with users queueing for food trucks, eating at the picnic tables, and conducting business meetings outdoors.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/spirit-plaza-spatial-mapping.jpg" alt="Hand-coded behavioral map of the plaza showing user activity zones during weekday lunch." />
+          <figcaption>Behavioral mapping with posture coding revealed concentrated activity around the food-truck zone and central seating during lunch (high: 101, average: 54, low: 27 users observed).</figcaption>
+        </figure>
+        <figure>
+          <img src="images/spirit-plaza-data-charts.jpg" alt="Pre/post-activation survey charts showing demographic breakdowns by gender, race, and number of participants." />
+          <figcaption>Comparative pre/post charts documented shifts in who used the space — and helped make the case that the plaza served Detroit residents, not only downtown commuters.</figcaption>
+        </figure>
+      </div>
+
+      <div class="project-detail">
+        <span class="project-detail-label">Outcome</span>
+        <div class="project-detail-content">
+          The data report contributed to the Planning &amp; Development Department's evaluation of whether to make the pilot a permanent civic space. Findings demonstrated that the activation drew higher pedestrian counts and broad community support across age groups and residency status — including resident participation that grew post-activation.
+        </div>
+      </div>
+
+      <a href="Spirit-Plaza-Report.pdf" target="_blank" rel="noopener" class="project-link">View Full Data Report — Spirit Plaza →</a>
+    </div>
+  </div>
+</article>
+
+<!-- ============================================== -->
+<!-- PROJECT 2: TIJUANA / BSFI                       -->
+<!-- ============================================== -->
+<article class="project">
+  <div class="project-hero">
+    <img src="images/tijuana-team.png" alt="The 2019 BSFI cohort and Colonos de Divina Providencia partners outside the Divina Community Center on the final day of the internship." />
+  </div>
+
+  <div class="project-body">
+    <div class="project-meta">
+      <div class="project-period">Summer 2019</div>
+      <div class="project-org">UC San Diego — Blum Summer Field Internship · Cross-Border Community Station</div>
+      <div class="project-location">Divina Providencia, Tijuana, MX</div>
+      <div class="project-tags">
+        <span class="project-tag">Participatory Design</span>
+        <span class="project-tag">Cross-Border</span>
+        <span class="project-tag">Community Capacity</span>
+        <span class="project-tag">Workshop Facilitation</span>
+      </div>
+    </div>
+
+    <div class="project-content">
+      <h3 class="project-title">Cross-Border Community Station — Divina Providencia</h3>
+      <p class="project-summary">
+        The Blum Summer Field Internship is a binational program of UCSD's Cross-Border Initiative, run in partnership with <em>Colonos de Divina Providencia</em> and the Tijuana River National Estuarine Research Reserve. Working in the canyon communities of western Tijuana, our cohort designed and delivered a community workshop on trash, erosion, and collective action — anchored in canyon-specific issues identified through fieldwork and partner relationships.
+      </p>
+
+      <div class="project-detail">
+        <span class="project-detail-label">My Role</span>
+        <div class="project-detail-content">
+          Field intern based at the Divina Community Station. Co-designed and co-facilitated the <strong>matching game</strong> — the centerpiece participatory tool of the final community workshop — with fellow interns Armando Olea and Natalie Muñoz.
+        </div>
+      </div>
+
+      <div class="project-detail">
+        <span class="project-detail-label">Methods &amp; Tools</span>
+        <div class="project-detail-content">
+          Co-design with community partners · Workshop facilitation in Spanish-speaking community settings · Participatory pedagogy across age groups · Scale-of-action framing (individual / collective / institutional) · Cross-cultural and intergenerational engagement · Site-specific issue documentation
+        </div>
+      </div>
+
+      <div class="project-images">
+        <figure>
+          <img src="images/tijuana-matching-game-mockup.png" alt="A 3 by 3 grid of paper sheets showing the early design draft of the matching game, with hand-written notes in red, blue, and green ink." />
+          <figcaption>Early design mockup of the matching game at the UCSD studio. The 3×3 grid organized canyon-community issues by the level of action required — individual, collective, or institutional.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/tijuana-studio-design.png" alt="Malka and fellow interns Armando Olea and Maria Montes Arvizu working at a studio table on workshop materials." />
+          <figcaption>Co-designing the workshop materials at UCSD with fellow interns before the final delivery in Divina Providencia.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/tijuana-matching-game-workshop.png" alt="The matching game in use during the final community workshop, with photos of canyon issues mounted on the wall and interns presenting to community members." />
+          <figcaption>The matching game live at the final workshop. Each photograph documented a real canyon-community issue; participants matched actions to outcomes by scale of response needed.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/tijuana-team.png" alt="Final-day group photograph with the 2019 BSFI cohort and CDP partners at the Divina Community Center." />
+          <figcaption>The 2019 BSFI cohort with <em>Colonos de Divina Providencia</em> partners on the final day at the Divina Community Center.</figcaption>
+        </figure>
+      </div>
+
+      <div class="project-detail">
+        <span class="project-detail-label">Outcome</span>
+        <div class="project-detail-content">
+          The matching game was successfully delivered at the final community workshop in Divina Providencia, engaging children, parents, and grandparents in identifying canyon issues and discussing scaled responses. The workshop also piloted marine-debris programming for our TRNERR partners, with the matching-game format documented for future iterations.
+        </div>
+      </div>
+
+      <a href="BSFI2019%20Tijuana-Estuary%20Station%20Final%20Report.pdf" target="_blank" rel="noopener" class="project-link">View Final Field Report — BSFI 2019 →</a>
+    </div>
+  </div>
+</article>
+
+<!-- ============================================== -->
+<!-- PROJECT 3: PPER ANTI-RACISM PROGRAM             -->
+<!-- ============================================== -->
+<article class="project">
+  <div class="project-body">
+    <div class="project-meta">
+      <div class="project-period">2020 – 2021</div>
+      <div class="project-org">UC San Diego Design Lab — Junior Designer</div>
+      <div class="project-location">San Diego, CA</div>
+      <div class="project-tags">
+        <span class="project-tag">Program Design</span>
+        <span class="project-tag">Equity</span>
+        <span class="project-tag">Workshop Curriculum</span>
+        <span class="project-tag">Public Programming</span>
+      </div>
+    </div>
+
+    <div class="project-content">
+      <h3 class="project-title">Power, Privilege &amp; Ethical Responses — Anti-Racism Program</h3>
+      <p class="project-summary">
+        In response to the murder of George Floyd in May 2020, I co-designed the Design Lab's <em>Power, Privilege, and Ethical Responses: Anti-Racism</em> studio series — a fourteen-session public program organized around the question "How might we design from whiteness to oneness?" Working with a program manager as the lead design pair, I helped build the program from the ground up at a moment when the institution needed it most.
+      </p>
+
+      <div class="project-detail">
+        <span class="project-detail-label">My Role</span>
+        <div class="project-detail-content">
+          Junior Designer and program co-designer. Alongside the program manager, I shaped the overall series structure, developed participant worksheets and supporting materials, conducted speaker interviews to inform session design, and contributed to workshop facilitation.
+        </div>
+      </div>
+
+      <div class="project-detail">
+        <span class="project-detail-label">Methods &amp; Tools</span>
+        <div class="project-detail-content">
+          Human-centered program design · Curriculum and worksheet development · Speaker research and interviews · Anti-racist design pedagogy · Public workshop facilitation
+        </div>
+      </div>
+
+      <div class="project-detail">
+        <span class="project-detail-label">Outcome</span>
+        <div class="project-detail-content">
+          The series ran across fourteen public studio sessions hosted by the Design Lab, featuring scholars and practitioners on topics ranging from anti-Blackness and white fragility to environmental racism and the school-to-prison pipeline. Sessions were archived publicly and remain accessible as a resource for design and planning practitioners working on equity.
+        </div>
+      </div>
+
+      <a href="https://www.youtube.com/watch?v=OJJAdtN3MuU" target="_blank" rel="noopener" class="project-link">Watch a Sample Studio Session →</a>
+    </div>
+  </div>
+</article>
+```
+
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+
+<section id="skills">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Skills &amp; Tools</div>
+      <h2 class="section-title">A planner's toolkit, <em>built for practice.</em></h2>
+    </div>
+
+```
+<div class="skills-grid">
+  <div class="skill-cluster">
+    <h3>Planning Practice</h3>
+    <ul>
+      <li>Community engagement &amp; participatory design</li>
+      <li>Public space &amp; placemaking strategy</li>
+      <li>Equitable smart growth frameworks</li>
+      <li>General plan and housing element familiarity</li>
+      <li>Stakeholder facilitation</li>
+      <li>Anti-displacement &amp; equity analysis</li>
+    </ul>
+  </div>
+
+  <div class="skill-cluster">
+    <h3>Research &amp; Analysis</h3>
+    <ul>
+      <li>Intercept survey design &amp; administration</li>
+      <li>Behavioral &amp; spatial-use mapping</li>
+      <li>Pedestrian count protocols</li>
+      <li>Census &amp; ACS demographic data</li>
+      <li>Pre/post comparative analysis</li>
+      <li>Field research &amp; documentation</li>
+    </ul>
+  </div>
+
+  <div class="skill-cluster">
+    <h3>Software &amp; Technical</h3>
+    <ul>
+      <li>GIS (ArcGIS, QGIS)</li>
+      <li>Adobe Creative Suite (InDesign, Illustrator)</li>
+      <li>Microsoft Office &amp; Google Workspace</li>
+      <li>Project management (Asana, Microsoft Project)</li>
+      <li>Data visualization tools</li>
+      <li>Familiarity with SketchUp</li>
+    </ul>
+  </div>
+
+  <div class="skill-cluster">
+    <h3>Project &amp; Program Management</h3>
+    <ul>
+      <li>Budget &amp; program management</li>
+      <li>Vendor &amp; subconsultant coordination</li>
+      <li>Cross-functional team leadership</li>
+      <li>Procurement &amp; contracts</li>
+      <li>Production scheduling</li>
+      <li>Operations and systems coordination</li>
+    </ul>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+
+<section class="cta-section" id="contact">
+  <div class="container">
+    <h2>Let's build <em>something together.</em></h2>
+    <p>
+      I'm currently exploring senior-level community planning roles in Los Angeles and the broader Southern California region. I'd love to hear about your work.
+    </p>
+    <div class="cta-buttons">
+      <a href="mailto:[email protected]" class="btn btn-primary">Get in Touch</a>
+      <a href="https://www.linkedin.com/in/malkawilliams" class="btn btn-outline" target="_blank" rel="noopener">View LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 Malka Williams · Community Planning Portfolio · Los Angeles, CA</p>
+  </div>
+</footer>
+
+</body>
+</html>
